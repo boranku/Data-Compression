@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+      <Tab text="Compress">
+         <content>
+            <VBox disable="true" prefHeight="348.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane prefHeight="97.0" prefWidth="600.0">
+                     <children>
+                        <Label fx:id="cLabel" contentDisplay="RIGHT" layoutX="64.0" layoutY="45.0" prefHeight="39.0" prefWidth="214.0" text="File:    ">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <Button fx:id="cSelectButton" mnemonicParsing="false" text="Select" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="96.0" prefWidth="600.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="29.0" prefHeight="28.0" prefWidth="202.0" text="Select method:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="216.0" layoutY="34.0" mnemonicParsing="false" text="LZW">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="cGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="337.0" layoutY="34.0" mnemonicParsing="false" text="Huffman" toggleGroup="$cGroup" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="117.0" prefWidth="600.0">
+                     <children>
+                        <Label contentDisplay="RIGHT" layoutX="64.0" layoutY="17.0" prefHeight="66.0" prefWidth="301.0" text="Key:              ">
+                           <graphic>
+                              <TextField />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="122.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="cButton" layoutX="251.0" layoutY="37.0" mnemonicParsing="false" text="Compress" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab text="Decompress">
+         <content>
+            <VBox disable="true" prefHeight="348.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="600.0">
+                     <children>
+                        <Label fx:id="dLabel" contentDisplay="RIGHT" layoutX="64.0" layoutY="45.0" prefHeight="39.0" prefWidth="214.0" text="File:    ">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <Button fx:id="dSelectButton" mnemonicParsing="false" text="Select" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="96.0" prefWidth="600.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="29.0" prefHeight="28.0" prefWidth="202.0" text="Select method:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="216.0" layoutY="34.0" mnemonicParsing="false" text="LZW">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="dGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="337.0" layoutY="34.0" mnemonicParsing="false" text="Huffman" toggleGroup="$dGroup" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="600.0">
+                     <children>
+                        <Label contentDisplay="RIGHT" layoutX="66.0" prefHeight="50.0" prefWidth="301.0" text="Key:              ">
+                           <graphic>
+                              <TextField />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="78.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="dButton" layoutX="238.0" layoutY="39.0" mnemonicParsing="false" text="Decompress" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
